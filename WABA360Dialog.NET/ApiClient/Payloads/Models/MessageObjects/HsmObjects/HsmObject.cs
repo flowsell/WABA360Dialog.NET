@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Enums;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
@@ -11,6 +12,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The namespace to be used. Beginning with v2.2.7, if the namespace does not match up to the element_name, the message fails to send.
         /// </summary>
         [JsonProperty("namespace")]
+        [JsonPropertyName("namespace")]
         public string Namespace { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The element name that indicates which template to use within the namespace. Beginning with v2.2.7, if the element_name does not match up to the namespace, the message fails to send.
         /// </summary>
         [JsonProperty("element_name")]
+        [JsonPropertyName("element_name")]
         public string ElementName { get; set; }
 
         /// <summary>
@@ -26,6 +29,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// This field used to allow for a fallback option, but this has been deprecated with v2.27.8.
         /// </summary>
         [JsonProperty("language")]
+        [JsonPropertyName("language")]
         public LanguageObject Language { get; set; }
 
         /// <summary>
@@ -33,6 +37,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// This field is an array of values to apply to variables in the template. See the Localizable Parameters section for more information.
         /// </summary>
         [JsonProperty("localizable_params")]
+        [JsonPropertyName("localizable_params")]
         public LocalizableParamObject LocalizableParams { get; set; }
     }
 }

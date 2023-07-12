@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// Currency code as defined in ISO 4217.
         /// </summary>
         [JsonProperty("currency_code")]
+        [JsonPropertyName("currency_code")]
         public string CurrencyCode { get; set; }
 
         /// <summary>
@@ -17,6 +19,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// Amount multiplied by 1000.
         /// </summary>
         [JsonProperty("amount_1000")]
+        [JsonPropertyName("amount_1000")]
         public int Amount1000 { get; set; }
     }
 }

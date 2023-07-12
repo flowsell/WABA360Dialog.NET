@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -8,12 +9,14 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// ID for the catalog the item belongs to.
         /// </summary>
         [JsonProperty("catalog_id")]
+        [JsonPropertyName("catalog_id")]
         public string CatalogId { get; set; }
 
         /// <summary>
         /// Unique identifier (in the catalog) of the product.
         /// </summary>
         [JsonProperty("product_retailer_id")]
+        [JsonPropertyName("product_retailer_id")]
         public string ProductRetailerId { get; set; }
     }
 }

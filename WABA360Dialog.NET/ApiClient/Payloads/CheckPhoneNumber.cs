@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Base;
 
@@ -14,6 +15,7 @@ namespace WABA360Dialog.ApiClient.Payloads
     public class CheckPhoneNumberResponse : ClientApiResponseBase
     {
         [JsonProperty("phone_number")]
+        [JsonPropertyName("phone_number")]
         public string PhoneNumber { get; set; }
     }
 }

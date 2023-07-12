@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Enums;
 using WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObjects;
@@ -13,6 +14,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.TemplateObjects
         /// Namespace of the template.
         /// </summary>
         [JsonProperty("namespace")]
+        [JsonPropertyName("namespace")]
         public string Namespace { get; set; }
 
         /// <summary>
@@ -20,6 +22,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.TemplateObjects
         /// Name of the template.
         /// </summary>
         [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
@@ -28,6 +31,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.TemplateObjects
         /// Only the deterministic language policy works with media template messages.
         /// </summary>
         [JsonProperty("language")]
+        [JsonPropertyName("language")]
         public LanguageObject Language { get; set; }
 
         /// <summary>
@@ -35,6 +39,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.TemplateObjects
         /// Array of components objects containing the parameters of the message.
         /// </summary>
         [JsonProperty("components")]
+        [JsonPropertyName("components")]
         public IEnumerable<TemplateMessageComponentObject> Components { get; set; }
     }
 }

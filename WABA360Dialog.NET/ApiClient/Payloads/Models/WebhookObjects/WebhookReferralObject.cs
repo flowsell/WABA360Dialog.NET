@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -8,24 +9,28 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// Headline used in the ad that generated the message.
         /// </summary>
         [JsonProperty("headline")]
+        [JsonPropertyName("headline")]
         public string Headline { get; set; }
 
         /// <summary>
         /// Body from the ad that generated the message.
         /// </summary>
         [JsonProperty("body")]
+        [JsonPropertyName("body")]
         public string Body { get; set; }
 
         /// <summary>
         /// The type of the ad’s source. Currently, supported values are ad and post.
         /// </summary>
         [JsonProperty("source_type")]
+        [JsonPropertyName("source_type")]
         public string SourceType { get; set; }
 
         /// <summary>
         /// Facebook ID for an ad or a post.
         /// </summary>
         [JsonProperty("source_id")]
+        [JsonPropertyName("source_id")]
         public string SourceId { get; set; }
 
         /// <summary>
@@ -35,6 +40,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// An error or mismatch when the user's client tries to look for an ad or post’s context.
         /// </summary>
         [JsonProperty("source_url")]
+        [JsonPropertyName("source_url")]
         public string SourceUrl { get; set; }
 
         /// <summary>
@@ -42,6 +48,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// The video that the user saw and clicked. This object is missing if the skip_referral_media_download application setting is set to true. See application settings for more details.
         /// </summary>
         [JsonProperty("video")]
+        [JsonPropertyName("video")]
         public WebhookMediaObject Video { get; set; }
 
         /// <summary>
@@ -49,6 +56,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// The image that the user saw and clicked. This object is missing if the skip_referral_media_download application setting is set to true. See application settings for more details.
         /// </summary>
         [JsonProperty("image")]
+        [JsonPropertyName("image")]
         public WebhookMediaObject Image { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Enums;
 using WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects;
@@ -16,6 +17,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// document: Used for Reply Buttons.
         /// </summary>
         [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public HeaderType Type { get; set; }
 
         /// <summary>
@@ -24,6 +26,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Maximum length: 60 characters.
         /// </summary>
         [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public string Text { get; set; }
 
         /// <summary>
@@ -31,6 +34,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Contains the media object for this video.
         /// </summary>
         [JsonProperty("video")]
+        [JsonPropertyName("video")]
         public MediaObject Video { get; set; }
 
         /// <summary>
@@ -38,6 +42,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Contains the media object for this image.
         /// </summary>
         [JsonProperty("image")]
+        [JsonPropertyName("image")]
         public MediaObject Image { get; set; }
 
         /// <summary>
@@ -45,6 +50,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Contains the media object for this document.
         /// </summary>
         [JsonProperty("document")]
+        [JsonPropertyName("document")]
         public MediaObject Document { get; set; }
     }
 

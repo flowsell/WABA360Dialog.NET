@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Name of the contact's company.
         /// </summary>
         [JsonProperty("company")]
+        [JsonPropertyName("company")]
         public string Company { get; set; }
 
         /// <summary>
@@ -17,6 +19,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Contact's business title.
         /// </summary>
         [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public string Title { get; set; }
 
         /// <summary>
@@ -24,6 +27,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Name of the contact's department.
         /// </summary>
         [JsonProperty("department")]
+        [JsonPropertyName("department")]
         public string Department { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Unique identifier of the product in a catalog.
         /// </summary>
         [JsonProperty("product_retailer_id")]
+        [JsonPropertyName("product_retailer_id")]
         public string ProductRetailerId { get; set; }
     }
 }

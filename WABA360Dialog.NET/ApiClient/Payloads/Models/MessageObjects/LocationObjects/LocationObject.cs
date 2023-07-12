@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.LocationObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.LocationObjects
         /// Longitude of the location.
         /// </summary>
         [JsonProperty("longitude")]
+        [JsonPropertyName("longitude")]
         public double Longitude { get; set; }
 
         /// <summary>
@@ -17,6 +19,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.LocationObjects
         /// Latitude of the location.
         /// </summary>
         [JsonProperty("latitude")]
+        [JsonPropertyName("latitude")]
         public double Latitude { get; set; }
 
         /// <summary>
@@ -24,6 +27,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.LocationObjects
         /// Name of the location.
         /// </summary>
         [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
@@ -31,6 +35,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.LocationObjects
         /// Address of the location. Only displayed if name is present.
         /// </summary>
         [JsonProperty("address")]
+        [JsonPropertyName("address")]
         public string Address { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// Date/time by component.
         /// </summary>
         [JsonProperty("component")]
+        [JsonPropertyName("component")]
         public HsmDateTimeComponentObject Component { get; set; }
 
         /// <summary>
@@ -17,6 +19,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// Date/time by Unix epoch.
         /// </summary>
         [JsonProperty("unix_epoch")]
+        [JsonPropertyName("unix_epoch")]
         public HsmDateTimeUnixEpochObject UnixEpoch { get; set; }
     }
 }

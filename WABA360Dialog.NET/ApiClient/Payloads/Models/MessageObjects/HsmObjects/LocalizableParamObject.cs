@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
 {
@@ -11,6 +12,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// See Supported Languages for all codes.
         /// </summary>
         [JsonProperty("default")]
+        [JsonPropertyName("default")]
         public string Default { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// If the currency object is used, it contains required parameters currency_code and amount_1000.
         /// </summary>
         [JsonProperty("currency")]
+        [JsonPropertyName("currency")]
         public CurrencyObject Currency { get; set; }
 
         /// <summary>
@@ -25,6 +28,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// If the date_time object is used, further definition of the date and time is required. See the example below for two of the options.
         /// </summary>
         [JsonProperty("date_time")]
+        [JsonPropertyName("date_time")]
         public DateTimeObject DateTime { get; set; }
     }
 }

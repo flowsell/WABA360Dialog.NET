@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObjects
 {
@@ -6,12 +7,15 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
     public class RowsObject
     {
         [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public string Title { get; set; }
 
         [JsonProperty("description")]
+        [JsonPropertyName("description")]
         public string Description { get; set; }
     }
 }

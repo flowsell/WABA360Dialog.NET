@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Base;
 using WABA360Dialog.ApiClient.Payloads.Models;
@@ -12,10 +13,11 @@ namespace WABA360Dialog.ApiClient.Payloads
         {
         }
     }
-    
+
     public class UploadMediaResponse : ClientApiResponseBase
     {
         [JsonProperty("media")]
+        [JsonPropertyName("media")]
         public IEnumerable<UploadMediaResult> Media { get; set; }
     }
 

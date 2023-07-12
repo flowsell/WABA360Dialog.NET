@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Enums;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
@@ -11,6 +12,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Street number and name
         /// </summary>
         [JsonProperty("street")]
+        [JsonPropertyName("street")]
         public string Street { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// City name.
         /// </summary>
         [JsonProperty("city")]
+        [JsonPropertyName("city")]
         public string City { get; set; }
 
         /// <summary>
@@ -25,6 +28,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// State abbreviation.
         /// </summary>
         [JsonProperty("state")]
+        [JsonPropertyName("state")]
         public string State { get; set; }
 
         /// <summary>
@@ -32,6 +36,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// ZIP code.
         /// </summary>
         [JsonProperty("zip")]
+        [JsonPropertyName("zip")]
         public string Zip { get; set; }
 
         /// <summary>
@@ -39,6 +44,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Full country name.
         /// </summary>
         [JsonProperty("country")]
+        [JsonPropertyName("country")]
         public string Country { get; set; }
 
         /// <summary>
@@ -46,6 +52,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Two-letter country abbreviation.
         /// </summary>
         [JsonProperty("country_code")]
+        [JsonPropertyName("country_code")]
         public string CountryCode { get; set; }
 
         /// <summary>
@@ -53,6 +60,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Standard Values: HOME, WORK
         /// </summary>
         [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public PlaceType? Type { get; set; }
     }
 }

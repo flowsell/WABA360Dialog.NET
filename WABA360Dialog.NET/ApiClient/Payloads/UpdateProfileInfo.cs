@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Base;
 
@@ -11,11 +12,12 @@ namespace WABA360Dialog.ApiClient.Payloads
             AboutText = aboutText;
 
         }
-        
+
         [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public string AboutText { get; }
     }
-    
+
     public class UpdateProfileInfoAboutTextResponse : ClientApiResponseBase
     {
     }

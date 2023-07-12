@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Enums;
 using WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects;
 using WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects;
@@ -19,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Supported value: individual
         /// </summary>
         [JsonProperty("recipient_type")]
+        [JsonPropertyName("recipient_type")]
         public string RecipientType { get; set; }
 
         /// <summary>
@@ -26,6 +28,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The WhatsApp ID for the recipient of your message. Use the ID returned from the contacts endpoint.
         /// </summary>
         [JsonProperty("to")]
+        [JsonPropertyName("to")]
         public string To { get; set; }
 
         /// <summary>
@@ -45,6 +48,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// hsm - This option will be deprecated when we launch the WhatsApp Business API v2.39. Use template instead.
         /// </summary>
         [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public MessageType Type { get; set; }
 
         /// <summary>
@@ -54,6 +58,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Values: false (default), true
         /// </summary>
         [JsonProperty("preview_url")]
+        [JsonPropertyName("preview_url")]
         public bool? PreviewUrl { get; set; }
 
         /// <summary>
@@ -61,6 +66,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Contains a text object.
         /// </summary>
         [JsonProperty("text")]
+        [JsonPropertyName("text")]
         public TextObject Text { get; set; }
 
         /// <summary>
@@ -68,6 +74,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The media object containing audio.
         /// </summary>
         [JsonProperty("audio")]
+        [JsonPropertyName("audio")]
         public MediaObject Audio { get; set; }
 
         /// <summary>
@@ -75,6 +82,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The media object containing a document.
         /// </summary>
         [JsonProperty("document")]
+        [JsonPropertyName("document")]
         public MediaObject Document { get; set; }
 
         /// <summary>
@@ -82,6 +90,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The media object containing an image.
         /// </summary>
         [JsonProperty("image")]
+        [JsonPropertyName("image")]
         public MediaObject Image { get; set; }
 
         /// <summary>
@@ -89,6 +98,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The media object containing a sticker.
         /// </summary>
         [JsonProperty("sticker")]
+        [JsonPropertyName("sticker")]
         public MediaObject Sticker { get; set; }
 
         /// <summary>
@@ -96,6 +106,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The media object containing a video.
         /// </summary>
         [JsonProperty("video")]
+        [JsonPropertyName("video")]
         public MediaObject Video { get; set; }
 
         /// <summary>
@@ -103,6 +114,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Contains a contacts object.
         /// </summary>
         [JsonProperty("contacts")]
+        [JsonPropertyName("contacts")]
         public ContactObject Contacts { get; set; }
 
         /// <summary>
@@ -110,6 +122,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Contains a location object.
         /// </summary>
         [JsonProperty("location")]
+        [JsonPropertyName("location")]
         public LocationObject Location { get; set; }
 
         /// <summary>
@@ -117,6 +130,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Contains a template object.
         /// </summary>
         [JsonProperty("template")]
+        [JsonPropertyName("template")]
         public TemplateMessageObject Template { get; set; }
 
         /// <summary>
@@ -124,6 +138,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// Contains an hsm object. This option will be deprecated when we launch the WhatsApp Business API v2.39. Use the template object instead.
         /// </summary>
         [JsonProperty("hsm")]
+        [JsonPropertyName("hsm")]
         public HsmObject Hsm { get; set; }
 
         /// <summary>
@@ -132,6 +147,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects
         /// The components of each interactive object generally follow a consistent pattern: header, body, footer, and action. See the interactive object below for more information.
         /// </summary>
         [JsonProperty("interactive")]
+        [JsonPropertyName("interactive")]
         public InteractiveObject Interactive { get; set; }
     }
 }

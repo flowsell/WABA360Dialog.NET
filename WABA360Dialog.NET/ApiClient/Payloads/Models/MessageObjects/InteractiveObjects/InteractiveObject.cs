@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Enums;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObjects
@@ -20,6 +21,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// - product_list: Use it for Multi-Product Messages.
         /// </summary>
         [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public InteractiveType Type { get; set; }
 
         /// <summary>
@@ -28,6 +30,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// You cannot set a header if your interactive object is of product type.
         /// </summary>
         [JsonProperty("header")]
+        [JsonPropertyName("header")]
         public HeaderObject Header { get; set; }
 
         /// <summary>
@@ -36,6 +39,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Maximum length: 1024 characters.
         /// </summary>
         [JsonProperty("body")]
+        [JsonPropertyName("body")]
         public TextBodyObject Body { get; set; }
 
         /// <summary>
@@ -44,6 +48,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Maximum length: 60 characters.
         /// </summary>
         [JsonProperty("footer")]
+        [JsonPropertyName("footer")]
         public TextFooterObject Footer { get; set; }
 
         /// <summary>
@@ -51,6 +56,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Action you want the user to perform after reading the message.
         /// </summary>
         [JsonProperty("action")]
+        [JsonPropertyName("action")]
         public ActionObject Action { get; set; }
     }
 }

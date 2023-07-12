@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// The media object ID. Do not use this field when message type is set to text.
         /// </summary>
         [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// Do not use this field when message type is set to text.
         /// </summary>
         [JsonProperty("link")]
+        [JsonPropertyName("link")]
         public string Link { get; set; }
 
         /// <summary>
@@ -26,6 +29,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// Do not use with audio or sticker media.
         /// </summary>
         [JsonProperty("caption")]
+        [JsonPropertyName("caption")]
         public string Caption { get; set; }
 
         /// <summary>
@@ -33,6 +37,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// Describes the filename for the specific document. Use only with document media.
         /// </summary>
         [JsonProperty("filename")]
+        [JsonPropertyName("filename")]
         public string Filename { get; set; }
 
         /// <summary>
@@ -40,6 +45,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// This path is optionally used with a link when the HTTP/HTTPS link is not directly accessible and requires additional configurations like a bearer token.
         /// </summary>
         [JsonProperty("provider")]
+        [JsonPropertyName("provider")]
         public ProviderObject Provider { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObjects
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Maximum length: 256 characters.
         /// </summary>
         [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Maximum length: 20 characters.
         /// </summary>
         [JsonProperty("title")]
+        [JsonPropertyName("title")]
         public string Title { get; set; }
     }
 }

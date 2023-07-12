@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Full name, as it normally appears.
         /// </summary>
         [JsonProperty("formatted_name")]
+        [JsonPropertyName("formatted_name")]
         public string FormattedName { get; set; }
 
         /// <summary>
@@ -17,6 +19,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// First name
         /// </summary>
         [JsonProperty("first_name")]
+        [JsonPropertyName("first_name")]
         public string FirstName { get; set; }
 
         /// <summary>
@@ -24,6 +27,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Last name.
         /// </summary>
         [JsonProperty("last_name")]
+        [JsonPropertyName("last_name")]
         public string LastName { get; set; }
 
         /// <summary>
@@ -31,6 +35,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Middle name.
         /// </summary>
         [JsonProperty("middle_name")]
+        [JsonPropertyName("middle_name")]
         public string MiddleName { get; set; }
 
         /// <summary>
@@ -38,6 +43,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Name suffix.
         /// </summary>
         [JsonProperty("suffix")]
+        [JsonPropertyName("suffix")]
         public string Suffix { get; set; }
 
         /// <summary>
@@ -45,6 +51,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.ContactObjects
         /// Name prefix.
         /// </summary>
         [JsonProperty("prefix")]
+        [JsonPropertyName("prefix")]
         public string Prefix { get; set; }
     }
 }

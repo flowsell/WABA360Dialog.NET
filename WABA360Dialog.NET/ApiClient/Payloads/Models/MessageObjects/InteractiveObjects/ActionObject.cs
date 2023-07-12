@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObjects
@@ -12,19 +13,22 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Maximum length: 20 characters.
         /// </summary>
         [JsonProperty("button")]
+        [JsonPropertyName("button")]
         public string Button { get; set; }
 
         /// <summary>
         /// Required for Reply Button Messages.
         /// </summary>
         [JsonProperty("buttons")]
+        [JsonPropertyName("buttons")]
         public IEnumerable<ButtonObject> Buttons { get; set; }
-        
+
         /// <summary>
         /// Required for List Messages and Multi-Product Messages.
         /// Array of SectionObject. There is a minimum of 1 and maximum of 10. See section object.
         /// </summary>
         [JsonProperty("sections")]
+        [JsonPropertyName("sections")]
         public IEnumerable<SectionObject> Sections { get; set; }
 
         /// <summary>
@@ -32,6 +36,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Unique identifier of the Facebook catalog linked to your WhatsApp Business Account. This ID can be retrieved via Commerce Manager.
         /// </summary>
         [JsonProperty("catalog_id")]
+        [JsonPropertyName("catalog_id")]
         public string CatalogId { get; set; }
 
         /// <summary>
@@ -39,6 +44,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.InteractiveObje
         /// Unique identifier of the product in a catalog.
         /// </summary>
         [JsonProperty("product_retailer_id")]
+        [JsonPropertyName("product_retailer_id")]
         public string ProductRetailerId { get; set; }
     }
 }

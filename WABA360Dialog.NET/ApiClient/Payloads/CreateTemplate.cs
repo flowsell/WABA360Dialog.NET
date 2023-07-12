@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Base;
 using WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.TemplateObjects;
@@ -37,12 +38,14 @@ namespace WABA360Dialog.ApiClient.Payloads
         /// Namespace of the template.
         /// </summary>
         [JsonProperty("namespace")]
+        [JsonPropertyName("namespace")]
         public string Namespace { get; set; }
 
         /// <summary>
         /// Name of the template.
         /// </summary>
         [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
@@ -50,6 +53,7 @@ namespace WABA360Dialog.ApiClient.Payloads
         /// Only the deterministic language policy works with media template messages.
         /// </summary>
         [JsonProperty("language")]
+        [JsonPropertyName("language")]
         public WhatsAppLanguage Language { get; set; }
 
         /// <summary>
@@ -57,15 +61,19 @@ namespace WABA360Dialog.ApiClient.Payloads
         /// Array of components objects containing the parameters of the message.
         /// </summary>
         [JsonProperty("components")]
+        [JsonPropertyName("components")]
         public IEnumerable<TemplateComponentObject> Components { get; set; }
 
         [JsonProperty("status")]
+        [JsonPropertyName("status")]
         public TemplateStatus Status { get; set; }
 
         [JsonProperty("category")]
+        [JsonPropertyName("category")]
         public string Category { get; set; }
 
         [JsonProperty("rejected_reason")]
+        [JsonPropertyName("rejected_reason")]
         public string RejectedReason { get; set; }
     }
 }

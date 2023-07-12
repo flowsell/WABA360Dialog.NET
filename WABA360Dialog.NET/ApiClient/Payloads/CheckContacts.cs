@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net.Http;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using WABA360Dialog.ApiClient.Payloads.Base;
 using WABA360Dialog.ApiClient.Payloads.Enums;
@@ -17,18 +18,22 @@ namespace WABA360Dialog.ApiClient.Payloads
         }
 
         [JsonProperty("contacts")]
+        [JsonPropertyName("contacts")]
         public IEnumerable<string> Contacts { get; }
 
         [JsonProperty("blocking")]
+        [JsonPropertyName("blocking")]
         public Blocking Blocking { get; }
 
         [JsonProperty("force_check")]
+        [JsonPropertyName("force_check")]
         public bool ForceCheck { get; }
     }
 
     public class CheckContactsResponse : ClientApiResponseBase
     {
         [JsonProperty("contacts")]
+        [JsonPropertyName("contacts")]
         public IEnumerable<CheckContactResult> Contacts { get; set; }
     }
 }

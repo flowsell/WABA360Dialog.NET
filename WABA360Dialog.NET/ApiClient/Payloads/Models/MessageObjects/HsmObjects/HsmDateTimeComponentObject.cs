@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
 {
@@ -11,6 +12,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// Options: "MONDAY", 1, "TUESDAY", 2, "WEDNESDAY", 3, "THURSDAY", 4, "FRIDAY", 5, "SATURDAY", 6, "SUNDAY", 7
         /// </summary>
         [JsonProperty("day_of_week")]
+        [JsonPropertyName("day_of_week")]
         public int? DayOfWeek { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The year
         /// </summary>
         [JsonProperty("year")]
+        [JsonPropertyName("year")]
         public int? Year { get; set; }
 
         /// <summary>
@@ -25,6 +28,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The month.
         /// </summary>
         [JsonProperty("month")]
+        [JsonPropertyName("month")]
         public int? Month { get; set; }
 
         /// <summary>
@@ -32,6 +36,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The day of month.
         /// </summary>
         [JsonProperty("day_of_month")]
+        [JsonPropertyName("day_of_month")]
         public int? DayOfMonth { get; set; }
 
         /// <summary>
@@ -39,6 +44,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The hour.
         /// </summary>
         [JsonProperty("hour")]
+        [JsonPropertyName("hour")]
         public int? Hour { get; set; }
 
         /// <summary>
@@ -46,6 +52,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// The minute.
         /// </summary>
         [JsonProperty("minute")]
+        [JsonPropertyName("minute")]
         public int? Minute { get; set; }
 
         /// <summary>
@@ -54,6 +61,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.HsmObjects
         /// Options: GREGORIAN, SOLAR_HIJRI
         /// </summary>
         [JsonProperty("calendar")]
+        [JsonPropertyName("calendar")]
         public string Calendar { get; set; }
     }
 }

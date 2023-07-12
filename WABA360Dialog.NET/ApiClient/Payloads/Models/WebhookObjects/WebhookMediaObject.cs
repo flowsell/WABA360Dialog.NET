@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// The media object ID. Do not use this field when message type is set to text.
         /// </summary>
         [JsonProperty("id")]
+        [JsonPropertyName("id")]
         public string Id { get; set; }
 
         /// <summary>
@@ -18,6 +20,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// Do not use with audio or sticker media.
         /// </summary>
         [JsonProperty("caption")]
+        [JsonPropertyName("caption")]
         public string Caption { get; set; }
 
         /// <summary>
@@ -25,24 +28,28 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// Describes the filename for the specific document. Use only with document media.
         /// </summary>
         [JsonProperty("filename")]
+        [JsonPropertyName("filename")]
         public string Filename { get; set; }
 
         /// <summary>
         /// Metadata pertaining to sticker media.
         /// </summary>
         [JsonProperty("metadata")]
+        [JsonPropertyName("metadata")]
         public MetadataObject Metadata { get; set; }
 
         /// <summary>
         /// Mime type of the media.
         /// </summary>
         [JsonProperty("mime_type")]
+        [JsonPropertyName("mime_type")]
         public string MimeType { get; set; }
 
         /// <summary>
         /// Checksum.
         /// </summary>
         [JsonProperty("sha256")]
+        [JsonPropertyName("sha256")]
         public string Sha256 { get; set; }
     }
 }

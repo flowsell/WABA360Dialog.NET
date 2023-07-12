@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -10,6 +11,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// "NBP" (notification-based pricing): Notifications are also known as Template Messages (more details on pricing here). This pricing model will be deprecated starting February 1st, 2022.
         /// </summary>
         [JsonProperty("pricing_model")]
+        [JsonPropertyName("pricing_model")]
         public string PricingModel { get; set; }
 
         /// <summary>
@@ -22,6 +24,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// - This flag is set to true for notification messages (template messages)
         /// </summary>
         [JsonProperty("billable")]
+        [JsonPropertyName("billable")]
         public bool Billable { get; set; }
 
         /// <summary>
@@ -31,6 +34,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// - referral_conversion: indicates that the conversation originated from a free entry point. These conversations are always user-initiated.
         /// </summary>
         [JsonProperty("category")]
+        [JsonPropertyName("category")]
         public string Category { get; set; }
     }
 }

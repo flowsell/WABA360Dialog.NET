@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -8,6 +9,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// Message text
         /// </summary>
         [JsonProperty("body")]
+        [JsonPropertyName("body")]
         public string Body { get; set; }
     }
 }

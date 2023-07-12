@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WABA360Dialog.ApiClient.Payloads.Base;
@@ -14,7 +15,8 @@ namespace WABA360Dialog.ApiClient.Payloads
 
     public class HealthCheckResponse : ClientApiResponseBase
     {
-        [JsonProperty("health")] 
+        [JsonProperty("health")]
+        [JsonPropertyName("health")]
         public JObject Health { get; set; }
     }
 }

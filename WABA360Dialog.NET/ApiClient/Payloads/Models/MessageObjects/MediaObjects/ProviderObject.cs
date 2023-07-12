@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
@@ -14,6 +15,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// The name for the provider
         /// </summary>
         [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
 
         /// <summary>
@@ -21,6 +23,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// The type of provider
         /// </summary>
         [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
 
         /// <summary>
@@ -28,6 +31,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.MessageObjects.MediaObjects
         /// The ConfigObject
         /// </summary>
         [JsonProperty("config")]
+        [JsonPropertyName("config")]
         public ConfigObject Config { get; set; }
     }
 

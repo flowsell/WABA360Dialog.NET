@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -12,6 +13,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// We may add more granularity on entry point point type in the origin object in future.
         /// </summary>
         [JsonProperty("type")]
+        [JsonPropertyName("type")]
         public string Type { get; set; }
     }
 }

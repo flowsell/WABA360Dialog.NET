@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
 {
@@ -9,6 +10,7 @@ namespace WABA360Dialog.ApiClient.Payloads.Models.WebhookObjects
         /// Contains the sender's profile name.
         /// </summary>
         [JsonProperty("name")]
+        [JsonPropertyName("name")]
         public string Name { get; set; }
     }
 }
